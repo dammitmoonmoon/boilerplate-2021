@@ -1,3 +1,24 @@
 {
-  "name": "boilerplate-2021"
+  "name": "boilerplate-2021",
+  "scripts": {
+    "a": "yarn add -D -E",
+    "commit": "yarn git-cz",
+    "postinstall": "husky install config/git/husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "commitizen": "4.2.3",
+    "commitlint": "12.1.1",
+    "cz-customizable": "6.3.0",
+    "husky": "6.0.0"
+  }
 }
