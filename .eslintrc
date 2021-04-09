@@ -1,12 +1,17 @@
 {
-  "extends": ["airbnb-base", "prettier"],
-  "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      { "devDependencies": true, "optionalDependencies": true, "peerDependencies": true }
-    ],
-    "no-console": ["error", { "allow": ["warn", "error"] }],
-    "no-use-before-define": ["error", "nofunc"],
-    "capitalized-comments": ["error", "always"]
-  }
+    "root": true,
+    "extends": ["airbnb-base", "prettier"],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "import/no-extraneous-dependencies": [
+            "error",
+            { "devDependencies": true, "optionalDependencies": true, "peerDependencies": true }
+        ],
+        "no-console": ["error", { "allow": ["warn", "error"] }],
+        "no-use-before-define": ["error", "nofunc"],
+        "capitalized-comments": ["error", "always"]
+    }
 }
