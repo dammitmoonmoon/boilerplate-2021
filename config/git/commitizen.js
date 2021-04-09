@@ -42,7 +42,7 @@ module.exports = {
         },
     ],
 
-    scopes: [{ name: 'frontend' }, { name: 'backend' }, { name: 'root' }],
+    scopes: [{ name: 'frontend-react' }, { name: 'root' }],
 
     subjectLimit: 72,
 };

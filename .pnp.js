@@ -21,12 +21,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "boilerplate-2021",
         "reference": "workspace:."
+      },
+      {
+        "name": "frontend-react",
+        "reference": "workspace:packages/frontend-react"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["boilerplate-2021", ["workspace:."]]
+      ["boilerplate-2021", ["workspace:."]],
+      ["frontend-react", ["workspace:packages/frontend-react"]]
     ],
     "fallbackPool": [
     ],
@@ -1924,6 +1929,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["map-cache", "npm:0.2.2"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["frontend-react", [
+        ["workspace:packages/frontend-react", {
+          "packageLocation": "./packages/frontend-react/",
+          "packageDependencies": [
+            ["frontend-react", "workspace:packages/frontend-react"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["fs-extra", [

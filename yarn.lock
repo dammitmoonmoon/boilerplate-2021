@@ -1653,6 +1653,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"frontend-react@workspace:packages/frontend-react":
+  version: 0.0.0-use.local
+  resolution: "frontend-react@workspace:packages/frontend-react"
+  languageName: unknown
+  linkType: soft
+
 "fs-extra@npm:8.1.0":
   version: 8.1.0
   resolution: "fs-extra@npm:8.1.0"

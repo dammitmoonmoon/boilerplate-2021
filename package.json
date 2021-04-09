@@ -1,7 +1,11 @@
 {
     "name": "boilerplate-2021",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
-        "a": "yarn add -D -E",
+        "g:a": "cd $INIT_CWD && yarn add -D -E",
         "commit": "yarn git-cz",
         "postinstall": "husky install config/git/husky"
     },

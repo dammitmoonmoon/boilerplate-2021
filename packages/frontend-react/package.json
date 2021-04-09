@@ -1,0 +1,7 @@
+{
+    "name": "frontend-react",
+    "private": true,
+    "scripts": {
+        "a": "yarn g:a"
+    }
+}
