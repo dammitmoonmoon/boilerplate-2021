@@ -17,13 +17,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            templateContent: `
-              <html lang='en'>
-                <bod id='root'>
-                  <script src='./dist/index.js'></script>
-                </body>
-              </html>
-            `,
+            template: './public/index.html',
         }),
     ],
 };
