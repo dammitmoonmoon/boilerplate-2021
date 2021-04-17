@@ -6127,6 +6127,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:acc13943586610376a2b8e87b079b6d6ad643e58d6f01a035031493e32b4de0983129d5505debc90ceec8e08bbecc7c7f218a85cf1b2901269dd1061e0adc784#npm:7.23.2"],
             ["eslint-plugin-react-hooks", "virtual:acc13943586610376a2b8e87b079b6d6ad643e58d6f01a035031493e32b4de0983129d5505debc90ceec8e08bbecc7c7f218a85cf1b2901269dd1061e0adc784#npm:4.2.0"],
             ["html-webpack-plugin", "virtual:acc13943586610376a2b8e87b079b6d6ad643e58d6f01a035031493e32b4de0983129d5505debc90ceec8e08bbecc7c7f218a85cf1b2901269dd1061e0adc784#npm:5.3.1"],
+            ["lint-staged", "npm:10.5.4"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:acc13943586610376a2b8e87b079b6d6ad643e58d6f01a035031493e32b4de0983129d5505debc90ceec8e08bbecc7c7f218a85cf1b2901269dd1061e0adc784#npm:17.0.2"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],

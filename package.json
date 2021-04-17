@@ -6,6 +6,8 @@
     ],
     "scripts": {
         "g:a": "cd $INIT_CWD && yarn add -D -E",
+        "lint": "yarn lint-staged",
+        "lint-all": "yarn workspaces foreach -v run lint",
         "commit": "yarn git-cz",
         "postinstall": "husky install config/git/husky"
     },
