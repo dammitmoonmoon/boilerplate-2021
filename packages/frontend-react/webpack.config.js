@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: './src/client/index.ts',
     mode: 'development',
     output: {
         path: path.join(__dirname, '/dist'),

@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import { App } from './App';
 import { act, render, screen } from '@testing-library/react';
 
 it('renders with or without a name', () => {
