@@ -1,5 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
     entry: './src/index.ts',
@@ -14,7 +16,14 @@ module.exports = {
         rules: [
             {
                 test: /\.[tj]sx?$/,
-                use: ['babel-loader'],
+                use: [
+                    {
+                        loader: require.resolve('babel-loader'),
+                        options: {
+                            plugins: [require.resolve('react-refresh/babel')],
+                        },
+                    },
+                ],
             },
         ],
     },
@@ -22,8 +31,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
         }),
+        new webpack.HotModuleReplacementPlugin(),
+        new ReactRefreshWebpackPlugin(),
     ],
     devServer: {
         historyApiFallback: true,
+        hot: true,
     },
 };
