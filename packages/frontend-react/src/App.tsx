@@ -36,7 +36,14 @@ export default function App() {
 }
 
 function Home() {
-    return <h2 data-testid="home">Home</h2>;
+    const [counter, setCounter] = React.useState(0);
+    return (
+        <>
+            <h2 data-testid="home">Home</h2>
+            <div>Counter: {counter}</div>
+            <button onClick={() => setCounter(counter + 1)}>+1</button>
+        </>
+    );
 }
 
 function About() {
