@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
-    entry: './src/client/index.ts',
+    entry: ['webpack-hot-middleware/client', './src/client/index.ts'],
     mode: 'development',
     output: {
         path: path.join(__dirname, '/dist'),
@@ -32,10 +32,7 @@ module.exports = {
             template: './public/index.html',
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new ReactRefreshWebpackPlugin(),
     ],
-    devServer: {
-        historyApiFallback: true,
-        hot: true,
-    },
 };
