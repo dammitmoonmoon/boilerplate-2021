@@ -3,9 +3,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-module.exports = {
+const config = (env) => ({
     entry: ['webpack-hot-middleware/client', './src/client/index.ts'],
-    mode: 'development',
+    mode: env.production === 'production' ? 'production' : 'development',
     output: {
         path: path.join(__dirname, '/dist'),
     },
@@ -35,4 +35,10 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         new ReactRefreshWebpackPlugin(),
     ],
+});
+
+module.exports = (env) => {
+    process.env.NODE_ENV = env.production ? 'production' : 'development';
+
+    return config(env);
 };
