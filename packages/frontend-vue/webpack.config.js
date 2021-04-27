@@ -12,8 +12,7 @@ module.exports = () => ({
                 use: 'vue-loader',
             },
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
+                test: /\.[tj]sx?$/,
                 loader: 'babel-loader',
             },
         ],

@@ -4,13 +4,15 @@
     </div>
 </template>
 
-<script lang="js">
+<script lang="ts">
 import { defineComponent } from 'vue';
+
+const text: string = 'hello world!';
 
 export default defineComponent({
     name: "App",
     data() {
-        return { text: "hello world"}
+        return { text }
     },
 });
 </script>
