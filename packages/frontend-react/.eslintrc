@@ -1,13 +1,19 @@
 {
-    "extends": ["prettier"],
+    "extends": ["prettier", "plugin:jest/recommended", "plugin:jest/style"],
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "jest"],
     "settings": {
         "import/resolver": {
             "node": {
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
             }
+        },
+        "jest": {
+            "version": 26
         }
+    },
+    "env": {
+        "jest/globals": true
     },
     "rules": {
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
@@ -25,6 +31,12 @@
         "no-console": ["error", { "allow": ["warn", "error"] }],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error", "nofunc"],
-        "capitalized-comments": ["error", "always"]
+        "capitalized-comments": ["error", "always"],
+        // Rules for Jest
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
     }
 }
