@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-export function App() {
+function App() {
     return (
         <Router>
             <Navigation />
@@ -64,3 +64,5 @@ function About() {
 function Users() {
     return <h2>Users</h2>;
 }
+
+export { App };
